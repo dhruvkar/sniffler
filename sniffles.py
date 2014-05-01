@@ -128,5 +128,8 @@ def inject():
 
 	s.sendto(packet, (dest_ip, 0))
 
-sniff(5)
-inject()
+if __name__ == '__main__':
+	s = raw_input("Enter number of seconds to run sniffer: ")
+	s = int(s)
+	sniff(s)
+	inject()
